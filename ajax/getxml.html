@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Get xml</title>
+</head>
+<script>
+	function getData(){
+		xhr = new XMLHttpRequest();
+		xhr.open("get", "sam.xml", true);
+		xhr.onreadystatechange = showdata;
+		xhr.responseType = "document";
+		xhr.send();
+	}
+	
+	function showdata(){
+		console.log("In showdata");
+		if(this.readyState == 4 && this.status == 200){
+			console.log("inside if");
+			document.querySelector("#abc").innerHTML = this.responseXML.getElementsByTagName("srn")[0].firstChild.nodeValue;
+		}
+	}
+</script>
+</head>
+<body>
+	<button onclick() = "getData()"> GET DATA </button>
+	<div id = "abc"></div>
+</body>
+</html>

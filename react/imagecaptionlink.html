@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>React Style</title>
+		<script crossdomain src = "https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossdomain src = "https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+		<script src = "https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	</head>
+	<body>
+		<div id = "container"></div>
+		<script type = "text/babel">
+			var dest = document.querySelector("#container");
+			var dimension = {
+				margin: "100px",
+			};
+			class Resimage extends React.Component{
+				render(){
+					return(
+						<div style = {dimension}><img src = {this.props.src})></img></div>);
+				}
+			}
+			class Reslink extends React.Component{
+				render(){
+					return(
+						<div><a href = {this.props.link}>{this.props.linktext}</a></div>);
+				}
+			}
+			class Rescaption extends React.Component{
+				render(){
+					return(
+						<div><p>{this.props.caption}</p></div>);
+				}
+			}
+			class SrchResult extends React.Component{
+				render(){
+					return(
+						<div>
+							<Resimage {...this.props}/>
+							<Reslink {...this.props}/>
+							<Rescaption {...this.props}/>
+						</div>);
+				}
+			}
+			ReactDOM.render(
+				<div>
+					<SrchResult src = "images/tiger.jpg" link = "https://en.wikipedia.org/wiki/Tiger" linktext = "wikipedia.org" caption = "Tiger | Facts, Information | Wikipedia"/>
+					
+					<SrchResult src = "images/peacock.jpg" link = "https://en.wikipedia.org/wiki/Peacock" linktext = "wikipedia.org" caption = "Peacock | Facts, Information | Wikipedia"/>
+				</div>, dest);	
+		</script>
+	</body>
+</html>

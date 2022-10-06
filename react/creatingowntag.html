@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>React</title>
+		<script crossdomain src = "https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossdomain src = "https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+		<script src = "https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	</head>
+	<body>
+		<div id = 'container'></div>
+		<script type = 'text/babel'>
+			var destination = document.querySelector("#container");
+			class HelloWorld extends React.Component {
+				render(){
+					var divstyle = {
+						color: "red",
+						}
+					return <div style = {divstyle}>
+						<h1>Hello, {this.props.name}, your SRN is {this.props.srn}!</h1>
+						{this.props.children}
+						</div>
+				}
+			}
+			ReactDOM.render(
+						<div>
+							<HelloWorld name = "Shadow" srn  = "001">
+							<p> Next line </p>
+							</HelloWorld>
+							<HelloWorld name = "Sonic" srn = "000">
+							<p> Next line </p>
+							</HelloWorld>
+						</div>, destination);
+		</script>
+	</body>
+</html>

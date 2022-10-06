@@ -1,0 +1,22 @@
+<html>
+<head>
+
+<script>
+	function clicker(){
+		console.log(event.target.id + " handled 1");
+	}
+	function init(){
+		document.querySelector("p").addEventListener("click", clicker);
+		document.querySelector("p").addEventListener("click", clicker);
+		document.querySelector("p").onclick = function(event){
+			console.log(event.target.id + " handled 3");
+		}
+	}
+</script>
+</head>
+<body onload = "init()">
+	<p id = "p1" onlclick = "console.log('p1 handled 4')">This needs to be clicked</p>
+</body>
+</html>
+		
+		

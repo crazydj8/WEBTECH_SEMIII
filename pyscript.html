@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  </head>
+  <body>
+    Python with Functions and Classes <br>
+    <py-script>
+	class Person:
+		def __init__(self, first_name, last_name):
+			self.firstname = first_name
+			self.lastname = last_name
+
+	class Student(Person):
+		def __init__(self, first_name, last_name, university):
+			self.university = university
+			super().__init__(first_name, last_name)
+		
+		def __str__(self):
+			return "Student: %s %s University: %s" % (self.firstname, self.lastname, self.university)
+
+	def create_students():
+		stud1 = Student("Alexandru", "Plesoiu", "Babes-Bolyai")
+		stud2 = Student("Ashley", "Wong", "Cambridge")
+		stud3 = Student("Madden", "Baird", "Babes-Bolyai")
+		
+		return [stud1, stud2, stud3]
+
+	def get_students_by_university(students, university):
+		return [stud for stud in students if stud.university == university]
+
+	def print_students(students):
+		for student in students:
+			print(student)
+
+	def main():
+		students = create_students()
+		ubb_students = get_students_by_university(students, "Babes-Bolyai")
+		
+		print("All Students:")
+		print_students(students)
+		
+		print("UBB Students:")
+		print_students(ubb_students)
+
+	main()
+    </py-script>
+  </body>
+</html>

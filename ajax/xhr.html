@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title> XHR </title>
+	<script>
+		function getdata(){
+			xhr = new XMLHttpRequest();
+			xhr.open("get", "ajax_info.txt", true);
+			chr.onreadystatechange = showdata;
+			xhr.send();
+		}
+		function showdata(){
+			if(this.readyState == 4 && this.status == 200){
+				document.querySelector("#abc").innerHTML = this.responseText;
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick() = "getdata()"> GET DATA </button>
+	<div id = "abc"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>prevent default example</title>
+	<style>
+		div {
+			margin-bottom: 10pxx;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<div>
+			<label for = "fname"> First Name: </label>
+			<input id = "fname" type = "text">
+		</div>
+		<div>
+			<label for = "lname"> Last Name: </label>
+			<input id = "lname" type = "text">
+		</div>
+		<div>
+			<input type = "submit" id = "submit">
+		</div>
+	</form>
+	<p></p>
+	<script>
+		const form = document.querySelector('form');
+		const fname = document.getElementById('fname');
+		const lname = document.getElementById('lname');
+		const para = document.querySelector('p');
+		
+		form.onsubmit = function(e) {
+			if(fname.value === '' || lname.value === '') {
+				e.preventDefault();
+				//para.textContent = 'You need to fill both names!'
+					alert("You need to fill both names");
+			}
+		}
+	</script>
+</body>
+		
+</body>
+</html>
+		
+		

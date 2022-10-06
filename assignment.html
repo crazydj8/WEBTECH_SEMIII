@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<title>Result and Re-evaluation</title>
+		<style>
+			body{
+				background-color: Green;}
+			th{
+				text-align: left;}
+			img#image{
+				float: right;}
+			h1#head{
+				position: relative;}
+			table#t1{
+				width: 800px;
+				background-color: Yellow;}
+			table#t2{
+				width: 500px;
+				background-color: DodgerBlue;}
+			input#123{
+				width = 300px;}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			<img id = "image" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHFLBvBFbwdvEUZEnIHpWSMm32I8DtxbKmHKIji7M0Ng&s" alt = "" align = "right">
+			<h1 id = "head">Student Information</h1>
+		</div>
+		<div>
+			<table id = "t1" border = "border">
+				<tr>
+					<th>SRN</th>
+					<th>Subject</th>
+					<th>Marks</th>
+				</tr>
+				<tr>
+					<td rowspan = 4>SRN123456</td>
+					<td>Web</td>
+					<td>75</td>
+				</tr>
+				<tr>
+					<td>DSA</td>
+					<td>70</td>
+				</tr>
+				<tr>
+					<td>C++</td>
+					<td>70</td>
+				</tr>
+				<tr>
+					<td>DMS</td>
+					<td>80</td>
+				</tr>
+				<tr>
+					<td colspan = 3>Result: Pass/Fail</td>
+				<tr>
+			</table>
+		</div>
+		<div>
+			<h3>Re-evaluation request</h3>
+		</div>
+		<div>
+			<form id = "form1">
+				<table id = "t2" border = "border">
+					<tr>
+						<th>First Name:</th>
+						<td><input type = "text" name = "name" id = "123" autofocus placeholder = "First Name" required /></td>
+					</tr>
+					<tr>
+						<th>SRN:</th>
+						<td><input type = "text" name = "srn" id = "124" placeholder = "SRN" required /></td>
+					</tr>
+					<tr>
+						<th>Gender:</th>
+						<td>
+							<input type = "radio" name = "xyz" value = "M" required/>Male  <input type = "radio" name = "xyz" value = "F" required />Female
+						</td>
+					</tr>
+					<tr>
+						<th>Email Id:</th>
+						<td><input type = "email" name = "mail" placeholder= "example@pes.edu" pattern = [a-z0-9./_%+-]+@pes.edu$ required><br/>
+					</tr>
+					<tr>
+						<th>Mobile:</th>
+						<td><input type = "text" name = "mob" id = "125" pattern = [0-9]{10} required /></td>
+					</tr>
+					<tr>
+						<th>Date of Request</th>
+						<td><input type = "date" name = "dob" required></td>
+					</tr>
+					<tr>
+						<th colspan = 2><input type = "checkbox" id = "checker" value = "checked" required/>I have verified that the above information is correct
+					</tr>
+					<tr>
+						<td colspan = 2><input type = "Submit" value = "Submit" onclick = "alertmsg()"/><input type = "reset" value = "Reset"/></td>
+					</tr>
+				</table>
+			</form>
+			<script>
+				function alertmsg(){
+					const val = document.getElementById("form1");
+					if(val.checkValidity()){
+						alert("Successfully Submitted!");
+					}
+					else{
+						alert("Unsuccessful, please try again!");
+					}
+				}
+			</script>
+		</div>
+	</body>
+</html>
+
+			

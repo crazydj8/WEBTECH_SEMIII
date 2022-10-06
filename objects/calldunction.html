@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Call function</title>
+</head>
+<body>
+	<p id = "demo"></p>
+	<script>
+		const person = {
+			fullName: function(city, country) {
+				return this.firstName + " " + this.lastName + ",", city + "," + country;
+			}
+		}
+		
+		const person1 = {
+			this.firstName = "John";
+			this.lastName = "Doe";
+		}
+			
+		document.getElementById("demo").innerHTML = person.fullName.call(person1, "Oslo", "Norway");
+			
+	</script>
+</body>
+</html>

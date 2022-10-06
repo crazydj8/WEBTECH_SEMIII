@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>JS toggling</title>
+	</head>
+	<body>
+		<p>SET Interval and CLEAR Interval</p><br>
+		<button onclick = "stop()">Stop Toggling</button>
+		
+		<script>
+			myInterval = setInterval(setc, 500);
+			function setc(){
+				let x = document.body;
+				x.style.backgroundColor = x.style.backgroundColor == "yellow" ? "pink": "yellow";
+			}
+			function stop(){
+				clearInterval(myInterval);
+			}
+		</script>
+	</body>
+</html>

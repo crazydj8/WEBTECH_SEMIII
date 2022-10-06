@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>JS object</title>
+	</head>
+	<body>
+		<p>Example of class object in JS</p><br>
+		<script>
+			class Employee{
+				constructor(fname, lname){
+					this.firstName = fname;
+					this.lastName = lname;
+				}
+				showName = function() {
+					alert(this.firstName + " " + this.lastName);
+				}
+			}
+			var emp2 = new Employee("Akshat", "Aryan");
+			emp2.showName();
+		</script>
+	</body>
+</html>

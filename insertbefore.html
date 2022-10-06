@@ -1,0 +1,16 @@
+<html>
+<body>
+<ul id = "mylist">
+<li>tea</li>
+<li>coffee</li>
+</ul>
+
+<script>
+const newNode = document.createElement("li");
+const textNode = document.createTextNode("water");
+newNode.appendChild(textNode);
+
+const list = document.getELementById("mylist");
+list.insertBefore(newNode, list.children[0]);
+</script>
+</body>

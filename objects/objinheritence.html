@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>object inheritance</title>
+</head>
+<body>
+	<p id = "123"></p>
+	<script>
+		let Vehicle = function(name, year){
+			this.name = name;
+			this.year = year;
+		}
+		Vehicle.prototype.calcAge = function(){
+			console.log("The make is " + (2022 - this.year) + " years old");
+			this.age = 2022 - this.year;
+		}
+		console.log(Vehicle.prototype);
+		let car = new Vehicle("Audi", 2020);
+		car.calcAge();
+		console.log(car);  
+	</script>
+</body>
+</html>

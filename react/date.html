@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Live date</title>
+    <script
+      crossdomain
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossdomain
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script type="text/babel">
+      class Counter extends React.Component {
+        constructor(props, context) {
+          super(props, context);
+          this.state = { time: new Date().toLocaleTimeString() };
+          this.update = this.update.bind(this);
+        }
+        update() {
+          this.setState(
+              {time: new Date().toLocaleTimeString()};
+          );
+        }
+        render() {
+          return <h1>{this.state.time}</h1>;
+        }
+      }
+      class CounterDisplay extends React.Component {
+        render() {
+          return (
+            <div>
+              <Counter />
+              <h2>Seconds</h2>
+              <h2>Countdown</h2>
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(<CounterDisplay />, document.querySelector("#container"));
+    </script>
+  </body>
+</html>

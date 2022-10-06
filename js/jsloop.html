@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>JS loop</title>
+	</head>
+	<body>
+		<p id = "demo"></p><br>
+		<p id = "demo1"></p>
+		<p id = "demo2"></p>
+			<script type = "text/javascript">
+				const players = ["Leclerc", "Hamilton", "Vettel", "Bottas", "Verstappen"];
+				players.pop();//pop last element
+				players.push("Ricciardo");
+				players.shift(); //will shift to right eliminating the first element
+				players.unshift("Russell"); //will add an element to first index position
+				//array declaration by const keyword
+				let text = "";
+				for(let i = 0; i < players.length; i++){
+					text += players[i] + "<br>";
+				}
+				document.getElementById("demo").innerHTML = text;
+				document.getElementById("demo1").innerHTML = players.toString();
+				document.getElementById("demo2").innerHTML = players.join("*");
+			</script>
+	</body>
+</html>

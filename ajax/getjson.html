@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Get xml</title>
+</head>
+<script>
+	function getData(){
+		xhr = new XMLHttpRequest();
+		xhr.open("get", "name.json", true);
+		xhr.onreadystatechange = showdata;
+		xhr.responseType = "json";
+		xhr.send();
+	}
+	
+	function showdata(){
+		console.log("In showdata");
+		if(this.readyState == 4 && this.status == 200){
+			console.log("inside if");
+			document.querySelector("#container").innerHTML = this.responseXML.getElementsByTagName("srn")[0].firstChild.nodeValue;
+		}
+	}
+</script>
+</head>
+<body>
+	<button onclick() = "getData()"> GET DATA </button>
+	<div id = "container"></div>
+</body>
+</html>

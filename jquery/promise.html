@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Jquery Promise</title>
+	<!--script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script-->
+	<script>
+		var weather;
+		const date = new Promise(function(resolve, reject) {
+			weather = false;
+			if (weather) {
+				const dateDetails = {name: "abc",
+									 location: "5th cross",
+									 table: 8};
+				resolve(dateDetails)
+			}
+			else{
+				reject(new Error("Bad weather"))
+			}
+		});
+		date.then(function(done){
+			console.log("We are going on a date!")
+			console.log(done)
+		})
+		.catch(function(error){
+			console.log(error.message)})
+	</script>
+</head>
+</html>
+	

@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>JS loop</title>
+	</head>
+	<body>
+		<p id = "demo"></p>
+			<script type = "text/javascript">
+			//if function call doesnt have all parameters, missing parameters will be taken as undefined
+			function myfunc(a, b){				
+				if (b == undefined){
+					b = 2;
+				}
+			return a * b;
+			}
+			document.getElementById("demo").innerHTML = myfunc(2);	
+			</script>
+	</body>
+</html>

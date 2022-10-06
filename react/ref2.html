@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>keys and refs</title>
+        <script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script type="text/babel">
+            var ev;
+            var colors = ['red', 'purple', 'green', 'yellow', 'blue']
+            class CustomText extends React.Component{
+                constructor(props){
+                    super(props);
+                    this.textPara = null;
+                    this.setTextRef = (element) => {
+                        this.textPara = element;
+                    };
+                    this.changeText = (e) => {
+                        if(this.textPara){
+                            ev = e;
+                            console.log(typeof e);
+                            console.log(e.target.value + " clicked");
+                            let i = (Math.floor(Math.random() * 100) % 5);
+                            this.textPara.innerHTML = colors[i];
+                            this.textPara.style.color = colors[i];
+                            ev.preventDefault();
+                            //return false;
+                        }
+                    };
+                }
+                render(){
+                    return(
+                        <div>
+                            <h1 ref = {this.setTextRef}>this is a test</h1>
+                            <input type = "button" value = "Change the text" onClick = {this.changeText}/>
+                        </div>
+                    );
+                }
+            }
+            ReactDOM.render(<CustomText/>, document.querySelector("#container"))
+        </script>
+    </body>
+</html>

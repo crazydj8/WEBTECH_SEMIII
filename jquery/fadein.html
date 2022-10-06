@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>JQuery fadein</title>
+
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("#div1").fadeIn();
+				$("#div2").fadeIn("slow");
+				$("#div3").fadeIn(3000);
+				$("#div4").fadeOut(3000);
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>To demonstrate fadeIn patterns</p>
+	<button>Start FadeIn</button><br><br>
+	<div id = "div1" style = "background: #98bf21; height: 80px; display: none; width: 100px;"></div>
+	<div id = "div2" style = "background: #00ffff; height: 80px; display: none; width: 100px;"></div>
+	<div id = "div3" style = "background: #ff0000; height: 80px; display: none; width: 100px;"></div>
+	<div id = "div4" style = "background: #0ff000; height: 80px; width: 100px;"></div>
+</body>
+</html>

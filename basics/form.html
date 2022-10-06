@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title>Form</title>
+	</head>
+	<body>
+		<h2>Sample form</h2>
+		<form method = "get" action = " ">
+			<div>
+				<label for = "123">Name:
+					<input type = "text" name = "abc" id = "123" autofocus placeholder = "Enter your name" required />
+				</label><br/>
+				<label for = "124">Contact No.: 
+					<input type = "text" name = "def" id = "124" pattern = [0-9]{10} placeholder = "Enter your Contact No." required /><br/>
+				</label>
+			<div>
+				<p> Your gender </p>
+				<fieldset>
+					<legend>Gender:</legend>
+					<input type = "radio" name = "xyz" value = "M" />M<br/>
+					<input type = "radio" name = "xyz" value = "F"/>F<br/>
+				</fieldset>
+			</div>
+			<div>
+				<p> Your DOB </p>
+				<input type = "date" name = "dob"><br/>
+			</div>
+			<div>
+				<p> Favourite color </p>
+				<input type = "color" name = "fcolor"><br/>
+			</div>
+			<div>
+				<p> Favourite number </p>
+				<input type = "number" name = "fnum" min = "0" max = "100"><br/>
+			</div>
+			<div>
+				<p> Your fav car </p>
+				<fieldset>
+					<legend>Car:</legend>
+					<input type = "radio" name = "z" value = "BMW" />BMW<br/>
+					<input type = "radio" name = "z" value = "Audi"/>Audi<br/>
+				</fieldset>
+			</div>
+			<div required>
+				<p> Your Favourite fruit </p>
+				<fieldset>
+					<legend>Fruit:</legend>
+					<input type = "checkbox" name = "xyz" value = "Apple" checked />Apple<br/>
+					<input type = "checkbox" name = "xyz" value = "Mango"/>Mango<br/>
+					<input type = "checkbox" name = "xyz" value = "Kiwi"/>Kiwi
+				</fieldset>
+			</div>
+			<div>
+				<br/><p> How would you like to consume the fruit</p>
+				<select name = "icon" multiple>
+					<option value = "Milkshake"> Milkshake </option>
+					<option value = "salad"> Salad </option>
+					<option selected value = "Cut Fruits"> Cut Fruits</option>
+				</select>
+			</div>
+			<div>
+				<br/><p> Write a short note on your favourite fruit</p>
+				<textarea name = "note" rows = "4" cols = "100"></textarea>
+			</div>
+			<div>
+				<p> Rate your favourite fruit </p>
+				<input type = "range" name = "rate" min = "0" max = "10"><br/>
+			</div>
+			<div>
+				<p> Your Email </p>
+				<input type = "email" name = "mail" pattern = [a-z0-9./_%+-]+@pes.edu$><br/>
+			</div>
+			<div>
+				<input type = "Submit" value = "send" />
+				<input type = "reset" value = "clear form"/>
+			</div>
+		</form>
+	</body>
+</html>

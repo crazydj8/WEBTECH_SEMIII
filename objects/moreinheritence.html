@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>object inheritance</title>
+</head>
+<body>
+	<p id = "123"></p>
+	<script>
+		function fruits(){
+			this.name = "fruit 1";
+			this.season = "Summer";
+		}
+		function apple(){
+			fruits.call(this);
+		}
+		apple.prototype = Object.create(fruits.prototype);
+		const app = new apple();
+		console.log(app.name);
+		console.log(app.season);
+	</script>
+</body>
+</html>

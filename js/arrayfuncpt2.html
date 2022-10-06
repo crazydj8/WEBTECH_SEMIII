@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>JS Array fuctions</title>
+	</head>
+	<body>
+		<p id = "demo"></p>
+			<script type = "text/javascript">
+				const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+				const fruit2 = fruits.concat(["Strawberry"]);
+				delete fruit2[0];
+				fruit2.splice(2, 0, "Lemon", "Peach");
+				document.getElementById("demo").innerHTML = fruit2;
+			</script>
+	</body>
+</html>

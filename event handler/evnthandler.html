@@ -1,0 +1,13 @@
+<html>
+<body>
+<button>Press me</button>
+
+<script>
+	const btn = document.querySelector('button');
+	btn.onclick = function() {
+		const rndCol = 'rgb(' + Math.random()*255 + ',' + Math.random()*255 + ',' + Math.random()*255  + ')';
+		document.body.style.backgroundColor = rndCol;
+	}
+</script>
+</body>
+</html>

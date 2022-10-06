@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>JS Date methods</title>
+	</head>
+	<body>
+		<p id = "demo"></p><br>
+		<p id = "demo2"></p>
+			<script type = "text/javascript">
+				const d = new Date();
+				let time = d.getTime()
+				//miliseconds passed since jan 1, 1970
+				let day = d.getDay()
+				//the number of today's day if sun = 0
+				document.getElementById("demo").innerHTML = time;
+				document.getElementById("demo2").innerHTML = day;
+			</script>
+	</body>
+</html>
