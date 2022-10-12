@@ -1,0 +1,1 @@
+module.exports.message = "Hello world. Imported.";
